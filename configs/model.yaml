@@ -1,0 +1,71 @@
+model:
+  name: G-Align
+
+prev_ckpt: null  #  Path of pre-trained checkpoint, null for training from scratch.
+
+# ! Model parameters
+unify_dim: 64
+
+Fingerprint:
+  hidden_dim: 64
+  n_layers: 1
+  conv_type: 'SAGE'  # Encoder for fingerprint, can be GCN, GAT, SAGE, MySAGE, etc.
+  add_self_loops: true  # for GCN
+  n_layers_fingerprint: 1
+  n_heads: 8  # for GAT
+  use_bn: false
+  probe_lr: 1e-2
+  fp_proj_dim: 64  # dimension of domain embedding
+  dropout: 0.5
+  readout_proj: true
+  task: 'node_cls' 
+  device: null  # Will use the same device as the main training
+  require_grad_only: true  # Whether to only compute gradients for the parameters that require gradients.
+  compressed_dim: 64   # pca_compressed dim
+  pca_whiten: true
+  pca_svd_full: false 
+  l2_normalize: true
+  random_state: 42
+  loss_type: 'ce'  # 'ce' or 'contrastive'
+  DE_type: 'conv'  # conv or pca
+  contrast_loss:
+    probe_mask_ratio: 0.3
+    probe_recon_weight: 1.0
+    probe_neigh_weight: 1.0
+    detach_embed: true
+  # Domain Embedding (DE) Convolutional Projection 
+  DE:
+    hidden_channels: 32  # Initial number of channels in conv layers
+    num_conv_layers: 2  # Number of convolutional layers
+    kernel_size: 3  # Kernel size for conv layers
+    padding: 1  # Padding for conv layers
+    use_maxpool: true  # Whether to use max pooling between conv layers
+    pool_size: 2  # Max pooling kernel size
+    pool_stride: 2  # Max pooling stride
+    adaptive_pool_size: 4  # Size for adaptive average pooling (outputs 4x4)
+    mlp_hidden_dims: [256, 128]  # Hidden dimensions for final MLP
+    mlp_dropout: 0.2  # Dropout rate for MLP
+    train_epochs: 300  # Number of epochs to train projection
+    train_lr: 1e-3  # Learning rate for training projection
+    diversity_weight: 0.1  # Weight for diversity regularization when M < d_e
+    padding_strategy: 'zero'  # or 'noise' or 'repeat_last'
+    padding_noise_std: 0.01  # if using 'noise'
+
+FiLM:
+  hidden_dim: 64
+  num_layers: 2
+  aligned_feat_dim: 64
+  dropout: 0.5
+  layernorm: false
+  softplus: true
+
+PAMA:
+  d_attn: 64
+  heads: 1
+  dropout: 0.5
+
+
+# for A5000 DMAL number of work 0
+PTModel:
+  lr: 5e-3    #1e-2   
+  weight_decay: 0.0005  # 0.00005

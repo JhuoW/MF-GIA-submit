@@ -1,0 +1,78 @@
+# @package _global_
+defaults:
+  - _self_ 
+  - /data   
+  - /model   
+  - optional user: env 
+  - override /hydra/hydra_logging@_group_: none 
+  - override /hydra/job_logging@_group_: none 
+
+
+# ! Path
+project_root: ${hydra:runtime.cwd}
+dirs:
+  data_storage: ${project_root}/datasets/   
+  hydra: ${.temp}hydra/
+  output: ${project_root}/generated_files/output/${model.name}/${uid}/ 
+  fingerprint_storage: ${project_root}/generated_files/fingerprint/  
+
+
+  checkpoint_dir: ${project_root}/generated_files/checkpoints/${model.name}/${uid}/  
+
+  temp: ${project_root}/generated_files/temp/working_dir/${uid}/
+
+
+res_file: ${dirs.output}seed${seed}_results.json
+uid: null 
+seed: 0
+remove_dir: false
+
+pretrain:
+  seed: 42
+  gpu: 1
+  pretrain_datasets: ['pubmed', 'arxiv', 'wikics', 'amazon-ratings']
+  train_tasks: ['pubmed_link','pubmed_node','arxiv','wikics', 'amazon-ratings']
+  eval_tasks: ['cora_node']
+  use_original_mask: false
+  pretrain_epochs: 8000
+
+  k_shot: 5
+  m_way: 10
+  t_query: 1
+  n_eqisodes: 100
+
+  min_delta: 0.001
+  patience: 10000
+  log_every_n_steps: 1
+  check_val_every_n_epoch: 5
+  
+wandb:
+  project: "GAlign-Pretrain-Ali"
+  debug: false
+
+logging:
+  level: info
+  enable_stdout_log: true
+  log_wandb_metric_to_stdout: False
+  prefix: ''
+
+
+# @ Hydra
+hydra:
+  run:
+    dir: ${dirs.hydra}
+
+
+
+link_cls:
+  model_path: 'generated_files/output/G-Align/Aug13-0:14-97cc0c8c/final_gfm_model.pt'
+  dataset: none
+  aggr_method: 'concat'
+  use_relation_emb: true
+  k_shot: none
+  m_way: none
+  n_episodes: 20
+  gpu_id: 1
+  llm_name: 'roberta'
+  seed: 42
+  max_edges_per_node: 100

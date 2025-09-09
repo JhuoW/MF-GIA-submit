@@ -1,0 +1,363 @@
+[15:44:16] INFO     Successfully loaded line graph with 8397 nodes                                                                                run_ICL_link.py:217
+           INFO     Loading cached line graph features from                                                                                       run_ICL_link.py:281
+                    /home/zhuowei/MyProj/G-Align-v2/G-Align-v2/datasets/ofa/KnowledgeGraph.FB15K237/kg_pca_cache/line_graph_features_192_64_10way                    
+                    .pt                                                                                                                                              
+           INFO     Evaluating on line grapht with 8397 nodes (edges)                                                                             run_ICL_link.py:395
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 1/10                                                                                                                                     
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 2/10                                                                                                                                     
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 3/10                                                                                                                                     
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 4/10                                                                                                                                     
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 5/10                                                                                                                                     
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+[15:44:17] INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 6/10                                                                                                                                     
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 7/10                                                                                                                                     
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 8/10                                                                                                                                     
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 9/10                                                                                                                                     
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 10/10                                                                                                                                    
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+
+============================================================
+RESULTS
+============================================================
+Dataset: fb15k237
+Accuracy: 0.9121 ± 0.0102
+Confidence: 0.9289 ± 0.0053
+Settings: 5-shot, 10-way
+Episodes: 10
+
+Per-Relation Accuracy (top 5):
+  Relation 1: 1.0000 ± 0.0000
+  Relation 4: 1.0000 ± 0.0000
+  Relation 6: 0.9959 ± 0.0041
+  Relation 0: 0.9949 ± 0.0039
+  Relation 8: 0.9870 ± 0.0259
+
+Episode-wise accuracies:
+  Episode 1: 0.9129
+  Episode 2: 0.9109
+  Episode 3: 0.9172
+  Episode 4: 0.9310
+  Episode 5: 0.8980
+  Episode 6: 0.9001
+  Episode 7: 0.9246
+  Episode 8: 0.9159
+  Episode 9: 0.9004
+  Episode 10: 0.9103
+
+============================================================
+K-SHOT SCALING ANALYSIS
+============================================================
+           INFO                                                                                                                                   run_ICL_link.py:515
+                    Testing 1-shot...                                                                                                                                
+           INFO     Loading KG dataset fb15k237 ...                                                                                               run_ICL_link.py:124
+           INFO     Successfully loaded line graph with 8397 nodes                                                                                run_ICL_link.py:217
+           INFO     Loading cached line graph features from                                                                                       run_ICL_link.py:281
+                    /home/zhuowei/MyProj/G-Align-v2/G-Align-v2/datasets/ofa/KnowledgeGraph.FB15K237/kg_pca_cache/line_graph_features_192_64_10way                    
+                    .pt                                                                                                                                              
+           INFO     Evaluating on line grapht with 8397 nodes (edges)                                                                             run_ICL_link.py:395
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 1/5                                                                                                                                      
+           INFO     Support: 10 edges, Query: 8387 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 2/5                                                                                                                                      
+           INFO     Support: 10 edges, Query: 8387 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 3/5                                                                                                                                      
+           INFO     Support: 10 edges, Query: 8387 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 4/5                                                                                                                                      
+           INFO     Support: 10 edges, Query: 8387 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 5/5                                                                                                                                      
+           INFO     Support: 10 edges, Query: 8387 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+1-shot: 0.8541 ± 0.0534
+           INFO                                                                                                                                   run_ICL_link.py:515
+                    Testing 3-shot...                                                                                                                                
+           INFO     Loading KG dataset fb15k237 ...                                                                                               run_ICL_link.py:124
+[15:44:18] INFO     Successfully loaded line graph with 8397 nodes                                                                                run_ICL_link.py:217
+           INFO     Loading cached line graph features from                                                                                       run_ICL_link.py:281
+                    /home/zhuowei/MyProj/G-Align-v2/G-Align-v2/datasets/ofa/KnowledgeGraph.FB15K237/kg_pca_cache/line_graph_features_192_64_10way                    
+                    .pt                                                                                                                                              
+           INFO     Evaluating on line grapht with 8397 nodes (edges)                                                                             run_ICL_link.py:395
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 1/5                                                                                                                                      
+           INFO     Support: 30 edges, Query: 8367 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 2/5                                                                                                                                      
+           INFO     Support: 30 edges, Query: 8367 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 3/5                                                                                                                                      
+           INFO     Support: 30 edges, Query: 8367 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 4/5                                                                                                                                      
+           INFO     Support: 30 edges, Query: 8367 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 5/5                                                                                                                                      
+           INFO     Support: 30 edges, Query: 8367 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+3-shot: 0.9122 ± 0.0148
+           INFO                                                                                                                                   run_ICL_link.py:515
+                    Testing 5-shot...                                                                                                                                
+           INFO     Loading KG dataset fb15k237 ...                                                                                               run_ICL_link.py:124
+           INFO     Successfully loaded line graph with 8397 nodes                                                                                run_ICL_link.py:217
+           INFO     Loading cached line graph features from                                                                                       run_ICL_link.py:281
+                    /home/zhuowei/MyProj/G-Align-v2/G-Align-v2/datasets/ofa/KnowledgeGraph.FB15K237/kg_pca_cache/line_graph_features_192_64_10way                    
+                    .pt                                                                                                                                              
+           INFO     Evaluating on line grapht with 8397 nodes (edges)                                                                             run_ICL_link.py:395
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 1/5                                                                                                                                      
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 2/5                                                                                                                                      
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 3/5                                                                                                                                      
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 4/5                                                                                                                                      
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 5/5                                                                                                                                      
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+5-shot: 0.9140 ± 0.0106
+           INFO                                                                                                                                   run_ICL_link.py:515
+                    Testing 10-shot...                                                                                                                               
+           INFO     Loading KG dataset fb15k237 ...                                                                                               run_ICL_link.py:124
+[15:44:19] INFO     Successfully loaded line graph with 8397 nodes                                                                                run_ICL_link.py:217
+           INFO     Loading cached line graph features from                                                                                       run_ICL_link.py:281
+                    /home/zhuowei/MyProj/G-Align-v2/G-Align-v2/datasets/ofa/KnowledgeGraph.FB15K237/kg_pca_cache/line_graph_features_192_64_10way                    
+                    .pt                                                                                                                                              
+           INFO     Evaluating on line grapht with 8397 nodes (edges)                                                                             run_ICL_link.py:395
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 1/5                                                                                                                                      
+           INFO     Support: 100 edges, Query: 8297 edges                                                                                         run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 2/5                                                                                                                                      
+           INFO     Support: 100 edges, Query: 8297 edges                                                                                         run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 3/5                                                                                                                                      
+           INFO     Support: 100 edges, Query: 8297 edges                                                                                         run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 4/5                                                                                                                                      
+           INFO     Support: 100 edges, Query: 8297 edges                                                                                         run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 5/5                                                                                                                                      
+           INFO     Support: 100 edges, Query: 8297 edges                                                                                         run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+10-shot: 0.9090 ± 0.0076
+
+============================================================
+M-WAY SCALING ANALYSIS
+============================================================
+           INFO                                                                                                                                   run_ICL_link.py:534
+                    Testing 5-way...                                                                                                                                 
+           INFO     Loading KG dataset fb15k237 ...                                                                                               run_ICL_link.py:124
+           INFO     Successfully loaded line graph with 3883 nodes                                                                                run_ICL_link.py:217
+           INFO     Loading cached line graph features from                                                                                       run_ICL_link.py:281
+                    /home/zhuowei/MyProj/G-Align-v2/G-Align-v2/datasets/ofa/KnowledgeGraph.FB15K237/kg_pca_cache/line_graph_features_192_64_5way.                    
+                    pt                                                                                                                                               
+           INFO     Evaluating on line grapht with 3883 nodes (edges)                                                                             run_ICL_link.py:395
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 1/5                                                                                                                                      
+           INFO     Support: 25 edges, Query: 3858 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 2/5                                                                                                                                      
+           INFO     Support: 25 edges, Query: 3858 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 3/5                                                                                                                                      
+           INFO     Support: 25 edges, Query: 3858 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 4/5                                                                                                                                      
+           INFO     Support: 25 edges, Query: 3858 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 5/5                                                                                                                                      
+           INFO     Support: 25 edges, Query: 3858 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+5-way: 0.9965 ± 0.0013
+           INFO                                                                                                                                   run_ICL_link.py:534
+                    Testing 10-way...                                                                                                                                
+           INFO     Loading KG dataset fb15k237 ...                                                                                               run_ICL_link.py:124
+[15:44:20] INFO     Successfully loaded line graph with 8397 nodes                                                                                run_ICL_link.py:217
+           INFO     Loading cached line graph features from                                                                                       run_ICL_link.py:281
+                    /home/zhuowei/MyProj/G-Align-v2/G-Align-v2/datasets/ofa/KnowledgeGraph.FB15K237/kg_pca_cache/line_graph_features_192_64_10way                    
+                    .pt                                                                                                                                              
+           INFO     Evaluating on line grapht with 8397 nodes (edges)                                                                             run_ICL_link.py:395
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 1/5                                                                                                                                      
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 2/5                                                                                                                                      
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 3/5                                                                                                                                      
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 4/5                                                                                                                                      
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 5/5                                                                                                                                      
+           INFO     Support: 50 edges, Query: 8347 edges                                                                                          run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+10-way: 0.9140 ± 0.0106
+           INFO                                                                                                                                   run_ICL_link.py:534
+                    Testing 20-way...                                                                                                                                
+           INFO     Loading KG dataset fb15k237 ...                                                                                               run_ICL_link.py:124
+           INFO     Successfully loaded line graph with 28363 nodes                                                                               run_ICL_link.py:217
+           INFO     Loading cached line graph features from                                                                                       run_ICL_link.py:281
+                    /home/zhuowei/MyProj/G-Align-v2/G-Align-v2/datasets/ofa/KnowledgeGraph.FB15K237/kg_pca_cache/line_graph_features_192_64_20way                    
+                    .pt                                                                                                                                              
+           INFO     Evaluating on line grapht with 28363 nodes (edges)                                                                            run_ICL_link.py:395
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 1/5                                                                                                                                      
+[15:44:21] INFO     Support: 100 edges, Query: 28263 edges                                                                                        run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 2/5                                                                                                                                      
+           INFO     Support: 100 edges, Query: 28263 edges                                                                                        run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 3/5                                                                                                                                      
+           INFO     Support: 100 edges, Query: 28263 edges                                                                                        run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 4/5                                                                                                                                      
+           INFO     Support: 100 edges, Query: 28263 edges                                                                                        run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 5/5                                                                                                                                      
+           INFO     Support: 100 edges, Query: 28263 edges                                                                                        run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+20-way: 0.7810 ± 0.0210
+           INFO                                                                                                                                   run_ICL_link.py:534
+                    Testing 50-way...                                                                                                                                
+           INFO     Loading KG dataset fb15k237 ...                                                                                               run_ICL_link.py:124
+           INFO     Successfully loaded line graph with 101252 nodes                                                                              run_ICL_link.py:217
+           INFO     Loading cached line graph features from                                                                                       run_ICL_link.py:281
+                    /home/zhuowei/MyProj/G-Align-v2/G-Align-v2/datasets/ofa/KnowledgeGraph.FB15K237/kg_pca_cache/line_graph_features_192_64_50way                    
+                    .pt                                                                                                                                              
+           INFO     Evaluating on line grapht with 101252 nodes (edges)                                                                           run_ICL_link.py:395
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 1/5                                                                                                                                      
+           INFO     Support: 250 edges, Query: 101002 edges                                                                                       run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 2/5                                                                                                                                      
+           INFO     Support: 250 edges, Query: 101002 edges                                                                                       run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 3/5                                                                                                                                      
+           INFO     Support: 250 edges, Query: 101002 edges                                                                                       run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+[15:44:22] INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 4/5                                                                                                                                      
+           INFO     Support: 250 edges, Query: 101002 edges                                                                                       run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+           INFO                                                                                                                                   run_ICL_link.py:402
+                    Episode 5/5                                                                                                                                      
+           INFO     Support: 250 edges, Query: 101002 edges                                                                                       run_ICL_link.py:339
+           INFO     Computing domain embedding for new graph...                                                                                            icl.py:214
+           INFO     Domain embedding shape: torch.Size([64])                                                                                               icl.py:224
+50-way: 0.5516 ± 0.0477
